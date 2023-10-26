@@ -119,7 +119,7 @@ ldconfig -N -v $(sed 's/:/ /' <<< $LD_LIBRARY_PATH) 2>/dev/null | grep libcudnn
 
 # opencv_env_setting
 
-# Install dependency
+## Install dependency
 
 - 1. 기존 버전이 설치되어있는지를 확인 후 설치가 안 되어있으면 설치를 진행하면 됨
 ```
@@ -161,7 +161,7 @@ sudo apt-get install mesa-utils libgl1-mesa-dri libgtkgl2.0-dev libgtkglext1-dev
 sudo apt-get install python2.7-dev python3-dev python-numpy python3-numpy
 ```
 
-# Download OPENCV
+## Download OPENCV
 ```
 wget -O opencv_contrib.zip https://github.com/opencv/opencv_contrib/archive/4.4.0.zip
 wget -O opencv.zip https://github.com/opencv/opencv/archive/4.4.0.zip
@@ -170,7 +170,7 @@ unzip opencv.zip
 unzip opencv_contrib.zip
 ```
 
-# Cmake option
+## Cmake option
 - make folder in opencv folder
 ```
 mkdir build
@@ -230,3 +230,4 @@ sudo ldconfig
 ```
 
 # Done
+
