@@ -57,7 +57,9 @@ pwd:
 image name
 ```
 jaykor97/freeway:rev.13_arm_jay_carto -> 식당용 로봇
-jaykor97/freeway:rev.13_arm_jay_carto_hospital -> 병원용 휠체어
+jaykor97/freeway:rev.13_arm_jay_carto_hospital -> 병원용 작은 휠체어
+jaykor97/freeway:rev.04_jay_carto_wheelchair -> 큰 휠체어
+jaykor97/freeway:rev.05_jay_carto -> 호텔 배달용 로봇
 
 ```
 ## docker run command
