@@ -213,7 +213,7 @@ make -j$
 sudo make install
 sudo ldconfig
 ```
-# After install
+## After install
 ```
 sudo make install
 위의 명령어로 인스톨을 하고,
@@ -229,5 +229,5 @@ sudo sh -c 'echo '/usr/local/lib' > /etc/ld.so.conf.d/opencv.conf'
 sudo ldconfig
 ```
 
-# Done
+## Done
 
