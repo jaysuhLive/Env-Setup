@@ -245,8 +245,10 @@ Mirrors
 Source Debs are also available
 
 Set up your keys
-```sudo apt install curl # if you haven't already installed curl```
-```curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -```
+```
+sudo apt install curl # if you haven't already installed curl
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+```
 Installation
 First, make sure your Debian package index is up-to-date:
 
@@ -255,19 +257,28 @@ There are many different libraries and tools in ROS. We provided four default co
 
 In case of problems with the next step, you can use following repositories instead of the ones mentioned above ros-shadow-fixed
 Desktop-Full Install: (Recommended) : ROS, rqt, rviz, robot-generic libraries, 2D/3D simulators and 2D/3D perception
-```sudo apt install ros-melodic-desktop-full```
+```
+sudo apt install ros-melodic-desktop-full
+```
 
 Desktop Install: ROS, rqt, rviz, and robot-generic libraries
-```sudo apt install ros-melodic-desktop```
+```
+sudo apt install ros-melodic-desktop
+```
 
 
 ROS-Base: (Bare Bones) ROS package, build, and communication libraries. No GUI tools.
-```sudo apt install ros-melodic-ros-base```
+```
+sudo apt install ros-melodic-ros-base
+```
 
 
 Individual Package: You can also install a specific ROS package (replace underscores with dashes of the package name):
 
-```sudo apt install ros-melodic-PACKAGE```
+```
+sudo apt install ros-melodic-PACKAGE
+```
+
 e.g.
 sudo apt install ros-melodic-slam-gmapping
 To find available packages, use:
@@ -278,8 +289,10 @@ Environment setup
 It's convenient if the ROS environment variables are automatically added to your bash session every time a new shell is launched:
 
 
-```echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc```
-```source ~/.bashrc```
+```
+echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+```
 If you have more than one ROS distribution installed, ~/.bashrc must only source the setup.bash for the version you are currently using.
 
 If you just want to change the environment of your current shell, instead of the above you can type:
@@ -289,20 +302,27 @@ If you just want to change the environment of your current shell, instead of the
 If you use zsh instead of bash you need to run the following commands to set up your shell:
 
 
-```echo "source /opt/ros/melodic/setup.zsh" >> ~/.zshrc```
-```source ~/.zshrc```
+```
+echo "source /opt/ros/melodic/setup.zsh" >> ~/.zshrc
+source ~/.zshrc
+```
+
 Dependencies for building packages
 Up to now you have installed what you need to run the core ROS packages. To create and manage your own ROS workspaces, there are various tools and requirements that are distributed separately. For example, rosinstall is a frequently used command-line tool that enables you to easily download many source trees for ROS packages with one command.
 
 To install this tool and other dependencies for building ROS packages, run:
 
 
-```sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential```
+```
+sudo apt install python-rosdep python-rosinstall python-rosinstall-generator python-wstool build-essential
+```
 Initialize rosdep
 Before you can use many ROS tools, you will need to initialize rosdep. rosdep enables you to easily install system dependencies for source you want to compile and is required to run some core components in ROS. If you have not yet installed rosdep, do so as follows.
 
 
-```sudo apt install python-rosdep```
+```
+sudo apt install python-rosdep
+```
 With the following, you can initialize rosdep.
 
 
