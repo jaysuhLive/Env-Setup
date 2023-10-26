@@ -436,52 +436,10 @@ sudo apt-get install ros-melodic-ddynamic-reconfigure
 
 ## Installation Instructions
 
-### Ubuntu
-
-### There are 2 sources to install realsense2_camera from:
-
-* ### Method 1: The ROS distribution:
-
-  *Ubuntu*
-
-    realsense2_camera is available as a debian package of ROS distribution. It can be installed by typing:
-    
-    ```sudo apt-get install ros-$ROS_DISTRO-realsense2-camera```
-
-    This will install both realsense2_camera and its dependents, including librealsense2 library and matching udev-rules.
-
-    Notice:
-    * The version of librealsense2 is almost always behind the one availeable in RealSense&trade; official repository.
-    * librealsense2 is not built to use native v4l2 driver but the less stable RS-USB protocol. That is because the last is more general and operational on a larger variety of platforms.
-    * realsense2_description is available as a separate debian package of ROS distribution. It includes the 3D-models of the devices and is necessary for running launch files that include these models (i.e. rs_d435_camera_with_model.launch). It can be installed by typing:
-    `sudo apt-get install ros-$ROS_DISTRO-realsense2-description`
-
-
-
-   ### Step 1: Install the latest Intel&reg; RealSense&trade; SDK 2.45.0
-
-    *Ubuntu*
-    
-    Install librealsense2 debian package:
-    * Jetson users - use the [Jetson Installation Guide](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation_jetson.md)
-    * Otherwise, install from [Linux Debian Installation Guide](https://github.com/IntelRealSense/librealsense/blob/master/doc/distribution_linux.md#installing-the-packages)
-      - In that case treat yourself as a developer. Make sure you follow the instructions to also install librealsense2-dev and librealsense2-dkms packages.
-
-   #### OR
-   - #### Build from sources by downloading the latest [Intel&reg; RealSense&trade; SDK 2.45](https://github.com/IntelRealSense/librealsense/releases/tag/v2.45.0) and follow the instructions under [Linux Installation](https://github.com/IntelRealSense/librealsense/blob/master/doc/installation.md)
-
-
-   ### Step 2: Install Intel&reg; RealSense&trade; ROS from Sources
-   - Create a [catkin](http://wiki.ros.org/catkin#Installing_catkin) workspace
    *Ubuntu*
    ```bash
    mkdir -p ~/catkin_ws/src
    cd ~/catkin_ws/src/
-   ```
-   *Windows*
-   ```batch
-   mkdir c:\catkin_ws\src
-   cd c:\catkin_ws\src
    ```
 
    - Clone the latest Intel&reg; RealSense&trade; ROS from [here](https://github.com/intel-ros/realsense/releases) into 'catkin_ws/src/'
