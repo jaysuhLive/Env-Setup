@@ -107,16 +107,21 @@ rosdep update
 ```
 
 # Install realsensesdk(version should be 2.45.0)
-##Building from Source using RSUSB Backend
+## Building from Source using RSUSB Backend
 Use the RSUSB backend without the kernel patching
 
-Download librealsense sdk v2.45.0
+### Download librealsense sdk v2.45.0 source code
 ```
-https://github.com/IntelRealSense/librealsense/releases/tag/v2.45.0
+cd
+git clone https://github.com/IntelRealSense/realsense-ros.git
+cd librealsense
+git checkout tags/v2.45.0
 ```
 
+### Install librealsense with CUDA
 In order to build the SDK using the RSUSB method and avoid the kernel patching procedure, please refer to libuvc_installation.sh script for details. If you have CUDA dev-kit installed, don't forget to add -DBUILD_WITH_CUDA=true for optimal performance.
 ```
+cd script
 ./libuvc_installation.sh -DBUILD_WITH_CUDA=true
 ```
 
