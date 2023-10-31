@@ -153,6 +153,11 @@ sudo apt-get install ros-melodic-ddynamic-reconfigure
    - Make sure all dependent packages are installed. You can check .travis.yml file for reference.
    - Specifically, make sure that the ros package *ddynamic_reconfigure* is installed. If *ddynamic_reconfigure* cannot be installed using APT or if you are using *Windows* you may clone it into your workspace 'catkin_ws/src/' from [here](https://github.com/pal-robotics/ddynamic_reconfigure/tree/kinetic-devel)
 
+   - I don't know why this is needed.....
+   ```bash
+   cd /usr/include
+   sudo cp -a opencv4 opencv
+   ```
 
    ```bash
   catkin_init_workspace
@@ -167,3 +172,4 @@ sudo apt-get install ros-melodic-ddynamic-reconfigure
   echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
   source ~/.bashrc
   ```
+
