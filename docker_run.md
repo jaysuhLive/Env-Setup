@@ -54,6 +54,10 @@ username:
 pwd:
 ```
 ## docker pull image
+```
+docker pull jaykor97/freeway:rev.13_arm_jay_carto
+```
+
 image name
 ```
 jaykor97/freeway:rev.13_arm_jay_carto -> 식당용 로봇
