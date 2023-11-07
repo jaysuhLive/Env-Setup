@@ -1,3 +1,5 @@
+# X86 ONLY!!!! From here
+
 # Install docker for ubuntu18.04
 
 - 1. system repo update
@@ -33,6 +35,7 @@ sudo usermod -aG docker $USER
 ```
 sudo systemctl status docker 
 ```
+# TO HERE
 
 # install docker first following the above description md
 ## install docker_compose with curl
