@@ -66,9 +66,9 @@ jaykor97/freeway:rev.04_jay_carto_wheelchair -> 큰 휠체어
 jaykor97/freeway:rev.04_jay_carto -> 호텔 배달용 로봇
 
 ```
-## docker run command
+## docker run command for hopital
 ```
-sudo docker run --init --privileged -it --name freeway --net=host --gpus all -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix -v ~/docker_share:/data -v /dev:/dev --rm jaykor97/freeway:rev.04_jay /bin/zsh
+sudo docker run --init --privileged -it --name freeway --net=host --runtime=nvidia -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix:rw -v ~/docker_share:/data -v /dev:/dev -v /tmp/.docker.xauth:/tmp/.docker.xauth:rw -e XAUTHORITY=/tmp/.docker.xauth -e QT_X11_NO_MITSHM=1 -e NVIDIA_DRIVER_CAPABILITIES=all --rm jaykor97/freeway:rev.13_arm_jay_carto /bin/zsh 
 ```
 ## docker run command for external gui
 - enable gpu capabilities and link to external dispaly port
